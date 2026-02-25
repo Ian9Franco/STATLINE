@@ -72,20 +72,23 @@ export interface PlayerStats {
 // ─── Initial mock data ────────────────────────────────────────────────────────
 
 const INITIAL_PROFILES: Profile[] = [
-  { id: 'u1', nombre_completo: 'Diego Forlán', rol: 'admin', creado_en: '2024-01-15', cargo: 'Director Técnico' },
-  { id: 'u2', nombre_completo: 'Pupi Zanetti', rol: 'manager', creado_en: '2024-02-01', cargo: 'Capitán de Campo' },
-  { id: 'u3', nombre_completo: 'Marcelo', rol: 'empleado', creado_en: '2024-03-10', cargo: 'Lateral Mágico' },
-  { id: 'u4', nombre_completo: 'Van Basten', rol: 'empleado', creado_en: '2024-03-15', cargo: 'Goleador Elegante' },
-  { id: 'u5', nombre_completo: 'Wayne Rooney', rol: 'empleado', creado_en: '2024-04-01', cargo: 'Bulls Terrier' },
-  { id: 'u6', nombre_completo: 'Ashley Cole', rol: 'empleado', creado_en: '2024-04-10', cargo: 'Muro Defensivo' },
-  { id: 'u7', nombre_completo: 'Andrés Iniesta', rol: 'empleado', creado_en: '2024-04-15', cargo: 'Cerebro' },
-  { id: 'u8', nombre_completo: 'Pedro León', rol: 'empleado', creado_en: '2024-04-20', cargo: 'Especialista en Centros' },
-  { id: 'u9', nombre_completo: 'Ogro Fabbiani', rol: 'empleado', creado_en: '2024-05-01', cargo: 'Tanque Creativo' },
-  { id: 'u10', nombre_completo: 'Pisculichi', rol: 'empleado', creado_en: '2024-05-10', cargo: 'Guante en el Pie' },
-  { id: 'u11', nombre_completo: 'Pepe Sand', rol: 'empleado', creado_en: '2024-05-15', cargo: 'Goleador Eterno' },
-  { id: 'u12', nombre_completo: 'Agustín Orión', rol: 'empleado', creado_en: '2024-06-01', cargo: 'Arquero de Clásicos' },
-  { id: 'u13', nombre_completo: 'Carlos Mayada', rol: 'empleado', creado_en: '2024-06-05', cargo: 'Polifuncional' },
-  { id: 'u14', nombre_completo: 'Pulga Rodríguez', rol: 'empleado', creado_en: '2024-06-10', cargo: 'Magia de Simoca' },
+  { id: 'u1', nombre_completo: 'ChangoNocturno', rol: 'admin', creado_en: '2024-01-15', cargo: 'Director Técnico' },
+  { id: 'u2', nombre_completo: 'Castolo', rol: 'manager', creado_en: '2024-02-01', cargo: 'Capitán de Campo' },
+  { id: 'u3', nombre_completo: 'Niellendner', rol: 'empleado', creado_en: '2024-03-10', cargo: 'Operario Senior' },
+  { id: 'u4', nombre_completo: 'Diego Forlán', rol: 'empleado', creado_en: '2024-03-15', cargo: 'Goleador Elegante' },
+  { id: 'u5', nombre_completo: 'Pupi Zanetti', rol: 'empleado', creado_en: '2024-04-01', cargo: 'Lateral Infatigable' },
+  { id: 'u6', nombre_completo: 'Marcelo', rol: 'empleado', creado_en: '2024-04-10', cargo: 'Lateral Mágico' },
+  { id: 'u7', nombre_completo: 'Van Basten', rol: 'empleado', creado_en: '2024-04-15', cargo: 'Goleador Elegante' },
+  { id: 'u8', nombre_completo: 'Wayne Rooney', rol: 'empleado', creado_en: '2024-04-20', cargo: 'Bulls Terrier' },
+  { id: 'u9', nombre_completo: 'Ashley Cole', rol: 'empleado', creado_en: '2024-05-01', cargo: 'Muro Defensivo' },
+  { id: 'u10', nombre_completo: 'Andrés Iniesta', rol: 'empleado', creado_en: '2024-05-10', cargo: 'Cerebro' },
+  { id: 'u11', nombre_completo: 'Pedro León', rol: 'empleado', creado_en: '2024-05-15', cargo: 'Especialista en Centros' },
+  { id: 'u12', nombre_completo: 'Ogro Fabbiani', rol: 'empleado', creado_en: '2024-06-01', cargo: 'Tanque Creativo' },
+  { id: 'u13', nombre_completo: 'Pisculichi', rol: 'empleado', creado_en: '2024-06-05', cargo: 'Guante en el Pie' },
+  { id: 'u14', nombre_completo: 'Pepe Sand', rol: 'empleado', creado_en: '2024-06-10', cargo: 'Goleador Eterno' },
+  { id: 'u15', nombre_completo: 'Agustín Orión', rol: 'empleado', creado_en: '2024-06-15', cargo: 'Arquero de Clásicos' },
+  { id: 'u16', nombre_completo: 'Carlos Mayada', rol: 'empleado', creado_en: '2024-06-20', cargo: 'Polifuncional' },
+  { id: 'u17', nombre_completo: 'Pulga Rodríguez', rol: 'empleado', creado_en: '2024-06-25', cargo: 'Magia de Simoca' },
 ]
 
 const INITIAL_PRODUCTS: Product[] = [
