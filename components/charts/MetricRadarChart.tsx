@@ -16,15 +16,15 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { subject: "Speed", A: 90, fullMark: 100 },
-  { subject: "Productivity", A: 85, fullMark: 100 },
-  { subject: "Resolution", A: 75, fullMark: 100 },
-  { subject: "Compliance", A: 95, fullMark: 100 },
+  { subject: "Velocidad", A: 90, fullMark: 100 },
+  { subject: "Productiv.", A: 85, fullMark: 100 },
+  { subject: "Resolución", A: 75, fullMark: 100 },
+  { subject: "Cumplimiento", A: 95, fullMark: 100 },
 ]
 
 const chartConfig = {
   A: {
-    label: "Score",
+    label: "Puntaje",
     color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig
@@ -33,8 +33,8 @@ export function MetricRadarChart() {
   return (
     <Card className="glass-panel border-0 shadow-none bg-transparent">
       <CardHeader className="items-center pb-4">
-        <CardTitle>Performance Radar</CardTitle>
-        <CardDescription>Current Period Assessment</CardDescription>
+        <CardTitle>Radar de Desempeño</CardTitle>
+        <CardDescription>Evaluación del Período Actual</CardDescription>
       </CardHeader>
       <CardContent className="pb-0">
         <ChartContainer

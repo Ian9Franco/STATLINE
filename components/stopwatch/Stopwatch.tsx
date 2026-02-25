@@ -59,7 +59,7 @@ export function Stopwatch() {
           onClick={() => {
             setIsActive(false)
             setSeconds(0)
-            // Emit stop event to DB later
+            // Emitir evento de stop a la DB después
           }} 
           size="lg" 
           variant="destructive"
@@ -71,7 +71,7 @@ export function Stopwatch() {
       </div>
 
       <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
-        {isActive ? "Tracking Active" : "Ready"}
+        {isActive ? "Midiendo Tiempo" : "Listo para arrancar"}
       </div>
     </div>
   )

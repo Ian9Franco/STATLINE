@@ -14,7 +14,7 @@ interface PESCardProps {
 }
 
 export function PESCard({ name, role, overallScore, stats, className }: PESCardProps) {
-  // Determine gradient based on overall score, like in games (Gold, Silver, Bronze, etc)
+  // Determinar gradiente según puntaje, estilo juegos (Oro, Plata, Bronce, etc)
   const isElite = overallScore >= 90
   const isGold = overallScore >= 80 && overallScore < 90
   
@@ -33,10 +33,10 @@ export function PESCard({ name, role, overallScore, stats, className }: PESCardP
       cardGradient,
       className
     )}>
-      {/* Glossy overlay */}
+      {/* Reflejo brilloso estilo carta */}
       <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none"></div>
       
-      {/* Inner card content */}
+      {/* Contenido interno de la tarjeta */}
       <div className={cn("h-full w-full rounded-t-[18%] rounded-b-[8%] border-[3px] border-white/20 p-4 flex flex-col items-center", textColor)}>
          
          <div className="w-full flex justify-between items-start">
@@ -44,7 +44,7 @@ export function PESCard({ name, role, overallScore, stats, className }: PESCardP
              <span className="text-4xl font-black">{overallScore}</span>
              <span className="text-xs uppercase font-bold">{role?.substring(0,3) || 'EMP'}</span>
            </div>
-           {/* Placeholder for player photo or avatar */}
+           {/* Placeholder para foto del empleado */}
            <div className="w-20 h-20 bg-black/10 rounded-full blur-[2px]"></div>
          </div>
 
@@ -54,7 +54,7 @@ export function PESCard({ name, role, overallScore, stats, className }: PESCardP
 
          <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 w-full px-2 text-sm font-semibold">
            <div className="flex justify-between">
-             <span>SPD</span>
+             <span>VEL</span>
              <span>{stats.speed}</span>
            </div>
            <div className="flex justify-between">
@@ -66,7 +66,7 @@ export function PESCard({ name, role, overallScore, stats, className }: PESCardP
              <span>{stats.res}</span>
            </div>
            <div className="flex justify-between">
-             <span>CMP</span>
+             <span>CUM</span>
              <span>{stats.comp}</span>
            </div>
          </div>
