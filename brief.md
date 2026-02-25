@@ -1,4 +1,4 @@
-# STATLINE — Documento Técnico
+# STATLINE by PaChef — Documento Técnico
 
 ## 1. Objetivo del Sistema
 
@@ -221,4 +221,4 @@ lib/
 
 ---
 
-> **STATLINE** no es solo una aplicación decorativa; es un sistema de modelado cuantitativo para el rendimiento en tiempo real. Construido correctamente, no solo muestra quién rinde mejor, sino que identifica exactamente dónde debe desplegarse cada persona para lograr la máxima eficiencia.
+> **STATLINE by PaChef** no es solo una aplicación decorativa; es un sistema de modelado cuantitativo para el rendimiento en tiempo real. Construido correctamente, no solo muestra quién rinde mejor, sino que identifica exactamente dónde debe desplegarse cada persona para lograr la máxima eficiencia.

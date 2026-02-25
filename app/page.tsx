@@ -38,7 +38,7 @@ export default function LoginPage() {
             <BarChart3 className="w-5 h-5 text-brand-cream" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-brand-cream tracking-widest">STATLINE</h1>
+            <h1 className="text-2xl font-bold text-brand-cream tracking-widest flex items-baseline gap-2">STATLINE <span className="text-sm font-medium text-brand-orange tracking-normal lowercase">by PaChef</span></h1>
             <p className="text-xs text-brand-cream/40 tracking-wider">RENDIMIENTO EN TIEMPO REAL</p>
           </div>
         </div>

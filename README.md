@@ -1,6 +1,6 @@
-# STATLINE
+# STATLINE by PaChef
 
-**STATLINE** es una aplicación web enfocada a móviles (mobile-first) para la medición y análisis del rendimiento de la producción interna en tiempo real.
+**STATLINE by PaChef** es una aplicación web enfocada a móviles (mobile-first) para la medición y análisis del rendimiento de la producción interna en tiempo real.
 
 El sistema abandona el enfoque tradicional de "hojas de cálculo" para adoptar una experiencia de usuario gamificada y visual, inspirada en las métricas de rendimiento deportivo (estilo FIFA/PES), brindando motivación a los empleados y análisis claro y automatizado para los mánagers y administradores.
 
@@ -51,4 +51,4 @@ Puedes alterar o ajustar los pesos que determinan la puntuación global entrando
 
 ---
 
-**STATLINE** no es solo una aplicación decorativa; es un sistema de modelado cuantitativo. Muestra quién rinde mejor e identifica exactamente dónde debe desplegarse cada persona para lograr la máxima eficiencia.
+**STATLINE by PaChef** no es solo una aplicación decorativa; es un sistema de modelado cuantitativo. Muestra quién rinde mejor e identifica exactamente dónde debe desplegarse cada persona para lograr la máxima eficiencia.
