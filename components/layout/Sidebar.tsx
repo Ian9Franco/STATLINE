@@ -53,8 +53,8 @@ export function Sidebar() {
         </div>
         {!collapsed && (
           <div>
-            <span className="text-sm font-bold text-sidebar-foreground tracking-widest flex items-baseline gap-1.5">
-              STATLINE <span className="text-[10px] font-medium text-brand-orange tracking-normal lowercase">by PaChef</span>
+            <span className="text-base font-bold text-sidebar-foreground tracking-widest flex items-baseline gap-1.5">
+              PaChef <span className="text-[10px] font-bold text-brand-orange tracking-widest uppercase">Statline</span>
             </span>
           </div>
         )}
@@ -139,8 +139,8 @@ export function Sidebar() {
           <div className="w-7 h-7 rounded-lg bg-brand-orange flex items-center justify-center">
             <BarChart3 className="w-3.5 h-3.5 text-brand-cream" />
           </div>
-          <span className="text-sm font-bold text-brand-cream tracking-widest flex items-baseline gap-1.5">
-            STATLINE <span className="text-[10px] font-medium text-brand-orange tracking-normal lowercase">by PaChef</span>
+          <span className="text-base font-bold text-brand-cream tracking-widest flex items-baseline gap-1.5">
+            PaChef <span className="text-[10px] font-bold text-brand-orange tracking-widest uppercase">Statline</span>
           </span>
         </div>
         <button

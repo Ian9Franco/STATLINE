@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'STATLINE by PaChef — Rendimiento en Tiempo Real',
+  title: 'PaChef | Statline — Rendimiento en Tiempo Real',
   description: 'Plataforma de medición y análisis del rendimiento de producción interna en tiempo real.',
   generator: 'IanPontorno',
 }
