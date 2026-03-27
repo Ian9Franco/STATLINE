@@ -4,6 +4,7 @@ import { useAppStore } from "@/lib/store"
 import { useState, useEffect, useCallback } from "react"
 import { Play, Square, Timer, Package, Clock, CheckCircle2 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { CustomSelect } from "@/components/ui/custom-select"
 
 function formatDuration(seconds: number) {
   const h = Math.floor(seconds / 3600)
@@ -62,7 +63,7 @@ export default function SesionesPage() {
     : null
 
   return (
-    <div className="p-4 md:p-6 max-w-3xl mx-auto pt-14 md:pt-6">
+    <div className="p-4 md:p-6 max-w-3xl mx-auto pt-20 md:pt-6">
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-foreground tracking-tight">Sesiones de Trabajo</h1>
@@ -70,10 +71,12 @@ export default function SesionesPage() {
       </div>
 
       {/* Cronometer card */}
-      <div id="sesiones-timer" className="bg-brand-dark rounded-2xl p-6 mb-6 relative overflow-hidden">
-        {/* Decorative ring */}
-        <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full border-2 border-brand-blue/20 pointer-events-none" />
-        <div className="absolute -right-4 -top-4 w-24 h-24 rounded-full border-2 border-brand-orange/20 pointer-events-none" />
+      <div id="sesiones-timer" className="bg-brand-dark rounded-2xl p-6 mb-6 relative">
+        {/* Decorative ring wrapper to hide overflow of rings but not dropdown */}
+        <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+          <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full border-2 border-brand-blue/20" />
+          <div className="absolute -right-4 -top-4 w-24 h-24 rounded-full border-2 border-brand-orange/20" />
+        </div>
 
         <div className="relative z-10">
           <div className="flex items-center gap-2 mb-4">
@@ -110,27 +113,22 @@ export default function SesionesPage() {
           {!activeSession ? (
             <div className="flex flex-col gap-3">
               {isAdmin && (
-                <select
+                <CustomSelect
                   value={selectedEmployee}
-                  onChange={e => setSelectedEmployee(e.target.value)}
-                  className="w-full text-sm border border-brand-blue/30 rounded-xl px-3 py-2.5 bg-brand-blue/20 text-brand-cream focus:outline-none focus:border-brand-orange"
-                >
-                  <option value="" className="bg-brand-dark text-brand-cream">Seleccionar empleado...</option>
-                  {employees.map(e => (
-                    <option key={e.id} value={e.id} className="bg-brand-dark text-brand-cream">{e.nombre_completo}</option>
-                  ))}
-                </select>
+                  onChange={setSelectedEmployee}
+                  placeholder="Seleccionar empleado..."
+                  options={employees.map(e => ({ value: e.id, label: e.nombre_completo }))}
+                />
               )}
-              <select
+              <CustomSelect
                 value={selectedProduct ?? ""}
-                onChange={e => setSelectedProduct(e.target.value ? parseInt(e.target.value) : null)}
-                className="w-full text-sm border border-brand-blue/30 rounded-xl px-3 py-2.5 bg-brand-blue/20 text-brand-cream focus:outline-none focus:border-brand-orange"
-              >
-                <option value="" className="bg-brand-dark text-brand-cream">Seleccionar producto...</option>
-                {activeProducts.map(p => (
-                  <option key={p.id} value={p.id} className="bg-brand-dark text-brand-cream">{p.nombre} ({formatDuration(p.tiempo_estandar_segundos)} std)</option>
-                ))}
-              </select>
+                onChange={(val) => setSelectedProduct(val ? parseInt(val as string) : null)}
+                placeholder="Seleccionar producto..."
+                options={activeProducts.map(p => ({
+                  value: p.id,
+                  label: `${p.nombre} (${formatDuration(p.tiempo_estandar_segundos)} std)`
+                }))}
+              />
               <button
                 onClick={handleStart}
                 disabled={!selectedProduct || (isAdmin && !selectedEmployee)}

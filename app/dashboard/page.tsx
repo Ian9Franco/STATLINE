@@ -11,7 +11,7 @@ export default function DashboardPage() {
   if (!currentUser) return null
 
   return (
-    <div className="md:pt-0 pt-14">
+    <div className="md:pt-0 pt-16">
       {currentUser.rol === "admin" && <AdminDashboard />}
       {currentUser.rol === "manager" && <ManagerDashboard />}
       {currentUser.rol === "empleado" && <EmpleadoDashboard />}

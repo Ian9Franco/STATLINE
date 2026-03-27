@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils"
 import { useState } from "react"
 import { GuideButton } from "@/components/layout/guide-button"
 
-const NAV_ITEMS = [
+export const NAV_ITEMS = [
   { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard", roles: ["admin", "manager", "empleado"] },
   { href: "/dashboard/empleados", icon: Users, label: "Empleados", roles: ["admin", "manager"] },
   { href: "/dashboard/productos", icon: Package, label: "Productos", roles: ["admin", "manager"] },
@@ -25,7 +25,6 @@ export function Sidebar() {
   const currentUser = useAppStore(s => s.currentUser)
   const logout = useAppStore(s => s.logout)
   const [collapsed, setCollapsed] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleLogout = () => {
     logout()
@@ -83,7 +82,7 @@ export function Sidebar() {
           <Link
             key={href}
             href={href}
-            onClick={() => setMobileOpen(false)}
+            onClick={() => {}}
             className={cn(
               "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150",
               collapsed ? "justify-center px-2" : "",
@@ -100,7 +99,7 @@ export function Sidebar() {
 
       {/* Bottom */}
       <div className="p-3 border-t border-sidebar-border flex flex-col gap-1">
-        <GuideButton onClick={() => setMobileOpen(false)} collapsed={collapsed} />
+        <GuideButton onClick={() => {}} collapsed={collapsed} />
         <button
           onClick={handleLogout}
           className={cn(
@@ -134,7 +133,7 @@ export function Sidebar() {
   return (
     <>
       {/* Mobile top bar */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 h-14 bg-brand-dark border-b border-sidebar-border">
+      <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 h-14 bg-brand-dark/95 backdrop-blur-md border-b border-sidebar-border">
         <div className="flex items-center gap-2">
           <div className="w-7 h-7 rounded-lg bg-brand-orange flex items-center justify-center">
             <BarChart3 className="w-3.5 h-3.5 text-brand-cream" />
@@ -144,31 +143,13 @@ export function Sidebar() {
           </span>
         </div>
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-brand-cream/70 hover:text-brand-cream transition-colors"
-          aria-label="Toggle menu"
+          onClick={handleLogout}
+          className="text-brand-cream/70 hover:text-brand-cream transition-colors flex items-center gap-2 bg-sidebar-accent/20 px-2.5 py-1.5 rounded-lg text-xs"
+          aria-label="Cerrar sesión"
         >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          <LogOut className="w-4 h-4" />
         </button>
       </div>
-
-      {/* Mobile drawer overlay */}
-      {mobileOpen && (
-        <div
-          className="md:hidden fixed inset-0 z-30 bg-black/50"
-          onClick={() => setMobileOpen(false)}
-        />
-      )}
-
-      {/* Mobile drawer */}
-      <aside
-        className={cn(
-          "md:hidden fixed top-14 left-0 bottom-0 z-40 w-64 bg-brand-dark transition-transform duration-300",
-          mobileOpen ? "translate-x-0" : "-translate-x-full"
-        )}
-      >
-        {sidebarContent}
-      </aside>
 
       {/* Desktop sidebar */}
       <aside

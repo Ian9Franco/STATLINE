@@ -71,7 +71,7 @@ export default function ProductosPage() {
   }
 
   return (
-    <div className="p-4 md:p-6 max-w-4xl mx-auto pt-14 md:pt-6">
+    <div className="p-4 md:p-6 max-w-4xl mx-auto pt-20 md:pt-6">
       {/* Header */}
       <div className="flex items-start justify-between gap-4 mb-6">
         <div>

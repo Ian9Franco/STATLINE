@@ -9,6 +9,7 @@ import Link from "next/link"
 import { useMemo, useState } from "react"
 import { NotesPanel } from "@/components/dashboard/notes-panel"
 import { cn } from "@/lib/utils"
+import { HoverEffect } from "@/components/ui/animations/hover-effect"
 
 export function AdminDashboard() {
   const profiles = useAppStore(s => s.profiles)
@@ -69,13 +70,15 @@ export function AdminDashboard() {
           <h1 className="text-2xl font-bold text-foreground tracking-tight">Panel de Admin</h1>
           <p className="text-sm text-muted-foreground mt-0.5">Vista completa del equipo en tiempo real</p>
         </div>
-        <Link
-          href="/dashboard/empleados"
-          className="flex items-center gap-2 text-sm font-medium bg-brand-orange text-brand-cream px-4 py-2 rounded-lg hover:bg-brand-orange/90 transition-colors flex-shrink-0"
-        >
-          <Plus className="w-4 h-4" />
-          <span className="hidden sm:inline">Nuevo empleado</span>
-        </Link>
+        <HoverEffect>
+          <Link
+            href="/dashboard/empleados"
+            className="flex items-center gap-2 text-sm font-medium bg-brand-orange text-brand-cream px-4 py-2 rounded-lg hover:bg-brand-orange/90 transition-colors flex-shrink-0"
+          >
+            <Plus className="w-4 h-4" />
+            <span className="hidden sm:inline">Nuevo empleado</span>
+          </Link>
+        </HoverEffect>
       </div>
 
       {/* KPI Row */}
@@ -106,14 +109,14 @@ export function AdminDashboard() {
               className="text-left"
               onClick={() => handleSelectEmployee(profile.id)}
             >
-              <div className={`relative transition-transform duration-200 ${selectedEmployee === profile.id ? "scale-105" : "hover:scale-102"}`}>
+              <HoverEffect className={`relative ${selectedEmployee === profile.id ? "scale-[1.03]" : ""}`}>
                 {idx === 0 && (
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-10 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm">
                     #1
                   </div>
                 )}
                 <PlayerCard profile={profile} stats={stats} />
-              </div>
+              </HoverEffect>
             </button>
           ))}
         </div>
