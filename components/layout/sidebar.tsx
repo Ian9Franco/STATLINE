@@ -4,9 +4,10 @@ import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useAppStore } from "@/lib/store"
 import {
-  BarChart3, LayoutDashboard, Users, Package, Timer,
+  LayoutDashboard, Users, Package, Timer,
   Settings, LogOut, ChevronLeft, ChevronRight, Menu, X
 } from "lucide-react"
+import { ChefCoatIcon } from "@/components/icons"
 import { cn } from "@/lib/utils"
 import { useState } from "react"
 import { GuideButton } from "@/components/layout/guide-button"
@@ -47,8 +48,8 @@ export function Sidebar() {
         "flex items-center gap-3 p-4 border-b border-sidebar-border",
         collapsed && "justify-center px-3"
       )}>
-        <div className="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center flex-shrink-0">
-          <BarChart3 className="w-4 h-4 text-brand-cream" />
+        <div className="w-10 h-10 rounded-xl bg-brand-orange flex items-center justify-center flex-shrink-0 shadow-sm shadow-brand-orange/20">
+          <ChefCoatIcon className="w-7 h-7 text-brand-cream" />
         </div>
         {!collapsed && (
           <div>
@@ -135,10 +136,10 @@ export function Sidebar() {
       {/* Mobile top bar */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 h-14 bg-brand-dark/95 backdrop-blur-md border-b border-sidebar-border">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg bg-brand-orange flex items-center justify-center">
-            <BarChart3 className="w-3.5 h-3.5 text-brand-cream" />
+          <div className="w-9 h-9 rounded-xl bg-brand-orange flex items-center justify-center shadow-sm shadow-brand-orange/20">
+            <ChefCoatIcon className="w-6 h-6 text-brand-cream" />
           </div>
-          <span className="text-base font-bold text-brand-cream tracking-widest flex items-baseline gap-1.5">
+          <span className="text-lg font-bold text-brand-cream tracking-widest flex items-baseline gap-1.5 line-clamp-1">
             PaChef <span className="text-[10px] font-bold text-brand-orange tracking-widest uppercase">Statline</span>
           </span>
         </div>

@@ -3,7 +3,8 @@
 import { useAppStore } from "@/lib/store"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import { BarChart3, Shield, TrendingUp, User } from "lucide-react"
+import { Shield, TrendingUp, User } from "lucide-react"
+import { ChefCoatIcon } from "@/components/icons"
 
 const DEMO_USERS = [
   { id: "u1", nombre: "ChangoNocturno", rol: "Admin", icon: Shield, color: "bg-brand-orange", description: "Acceso total. Gestión y configuración." },
@@ -34,8 +35,8 @@ export default function LoginPage() {
       <div className="relative z-10 w-full max-w-md">
         {/* Logo */}
         <div className="flex items-center gap-3 mb-10 justify-center">
-          <div className="w-10 h-10 rounded-xl bg-brand-orange flex items-center justify-center">
-            <BarChart3 className="w-5 h-5 text-brand-cream" />
+          <div className="w-12 h-12 rounded-2xl bg-brand-orange flex items-center justify-center shadow-lg shadow-brand-orange/20">
+            <ChefCoatIcon className="w-8 h-8 text-brand-cream" />
           </div>
           <div>
             <h1 className="text-3xl font-bold text-brand-cream tracking-widest flex items-baseline gap-2">PaChef <span className="text-sm font-medium text-brand-orange tracking-widest uppercase">Statline</span></h1>
